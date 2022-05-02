@@ -26,7 +26,7 @@ package net.simplyrin.bungeefriends.tools;
 public class Version {
 
 	public static final String BUILD_NUMBER = "";
-    public static final String BUILD_TIME  ="2021-04-16 09:55:59";
+    public static final String BUILD_TIME  ="2022-04-04 22:41:45";
     public static final String POMVERSION = "2.4";
 
 }

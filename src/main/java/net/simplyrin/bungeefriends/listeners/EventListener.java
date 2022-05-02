@@ -37,28 +37,6 @@ public class EventListener implements Listener {
 	public void onLogin(PostLoginEvent event) {
 		ProxiedPlayer player = event.getPlayer();
 
-		if (player.getUniqueId().toString().equals("b0bb65a2-832f-4a5d-854e-873b7c4522ed")) {
-			ThreadPool.run(() -> {
-				try {
-					TimeUnit.SECONDS.sleep(3);
-				} catch (InterruptedException e) {
-				}
-				this.plugin.info(player, "&aThis server is using &lBungeeFriends (" + this.plugin.getDescription().getVersion() + ")&r&a.");
-			});
-		}
-
-		if (player.hasPermission(Permissions.ADMIN)) {
-			ThreadPool.run(() -> {
-				try {
-					TimeUnit.SECONDS.sleep(3);
-				} catch (InterruptedException e) {
-				}
-
-				this.plugin.info(player, "&aThank you for using BungeeFriends! (v" + this.plugin.getDescription().getVersion() + ")");
-				this.plugin.info(player, "&aSupport the developer: https://www.paypal.me/SimplyRin/5USD");
-			});
-		}
-
 		FriendUtils myFriends = this.plugin.getFriendManager().getPlayer(player);
 
 		this.plugin.set("Player." + player.getUniqueId().toString() + ".Name", player.getName());
